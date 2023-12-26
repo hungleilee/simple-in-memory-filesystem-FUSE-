@@ -2,11 +2,14 @@ In its original form, the filesystem was limited by static allocation, which res
 
 To overcome these limitations, the filesystem underwent significant modifications, shifting from a static to a dynamic allocation model. The key changes include:
 
-Dynamic Directory Management: The static array for directories was replaced with a dynamically allocated array. This change allows the filesystem to expand the directory list as needed, removing the upper limit on the number of directories.
+Dynamic Directory Management: 
+The static array for directories was replaced with a dynamically allocated array. This change allows the filesystem to expand the directory list as needed, removing the upper limit on the number of directories.
 
-Dynamic File Management: Similarly, the file metadata storage was transitioned to a dynamic structure, enabling the filesystem to accommodate an increasing number of files without a predefined limit.
+Dynamic File Management: 
+Similarly, the file metadata storage was transitioned to a dynamic structure, enabling the filesystem to accommodate an increasing number of files without a predefined limit.
 
-Linked List for File Content: To support larger file sizes, file contents are now managed using a linked list for each file. This approach allows for the storage of file sizes beyond the constraints of static arrays.
+Linked List for File Content: 
+To support larger file sizes, file contents are now managed using a linked list for each file. This approach allows for the storage of file sizes beyond the constraints of static arrays.
 
 These enhancements significantly improve the scalability and flexibility of the filesystem, making it more capable of handling varying numbers and sizes of files and directories in a memory-efficient manner.
 
